@@ -1,7 +1,9 @@
-import OpenRoutes   from "./OpenRoutes";
-import UserRoutes   from "./UserRoutes";
+import Account  from "./Account";
+import Open     from "./Open";
+import User     from "./User";
 
 module.exports = {
-    UserRoutes,
-    OpenRoutes,
+    Account,
+    User,
+    Open,
 }

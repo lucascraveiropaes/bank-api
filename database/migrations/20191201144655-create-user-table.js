@@ -42,7 +42,7 @@ module.exports = {
             agency: {
                 allowNull: true,
                 type: Sequelize.STRING,
-                unique: true,
+                unique: false,
             },
             balance: {
                 defaultValue: 500,

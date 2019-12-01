@@ -21,6 +21,8 @@ async function AuthMiddleware(req, res, next) {
 
     if (user === null)
         return res.status(403).send(invalidAccessResponse);
+        
+    req.midd = { user };
 
     return next();
 }
