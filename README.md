@@ -1,13 +1,13 @@
-# NodeJS Boilerplate API
+# Bank API
 
-NodeJS Rest API developed with Express.
+Bank API developed with Express and Sequelize.
 
 ## Download and installation
 
 Download the project:
 
 ```git
-git clone https://github.com/maksen-git/TOTAL-GESTAO_DE_FROTA-API.git
+git clone https://github.com/lucascraveiropaes/bank-api.git
 ```
 
 Install all dependencies:
@@ -17,12 +17,12 @@ npm install
 ```
 
 Run the most recent migration to create and update the database (explanation below).  
-**Note:** The database must be created before performing the migration, and the name must be **app**.
+**Note:** The database must be created before performing the migration, and the name must be **bank-api**.
 
 Finally, start the server:
 
 ```bash
-npm run start
+npm run dev
 ```
 
 ## Principais Dependências
@@ -97,7 +97,7 @@ GET /
 **Resposta**
 
 ```
-NodeJS Boilerplate API - v0.1
+Bank API - v0.1
 ```
 
 -----------------------------------------------------
@@ -110,17 +110,13 @@ POST /users/login
 
 **Body**
 
-```js
-{
-	"login": "user_email@gmail.com",
-	"password": "somepassword"
-}
-```
-
-**Header Example**
+**Obs.:** The password must be sent using hash512.
 
 ```json
-client-key: ++6sdfs21cs65dc4s2df12
+{
+	"login": "111.111.111-11",
+	"password": "somepassword"
+}
 ```
 
 **Resposta**
@@ -129,13 +125,16 @@ client-key: ++6sdfs21cs65dc4s2df12
 {
     "status": true,
     "user": {
-        "id": 1,
-        "name": "User Full Name",
-        "email": "user_email@gmail.com",
-        "token": "b1O3KBTGPg(...@FgWw0w3l9",
-        "clientKey": "++6sdfs21cs65dc4s2df12",
-        "createdAt": "2019-09-07T03:27:25.000Z",
-        "updatedAt": "2019-09-07T06:28:49.000Z"
+        "name": "Lucas Craveiro Paes",
+        "cpf": "111.111.111-11",
+        "email": "lucascraveiropaes@gmail.com",
+        "id": 15,
+        "account": "9780865-1",
+        "agency": "0001",
+        "balance": 500,
+        "updatedAt": "2019-12-01T15:55:18.632Z",
+        "createdAt": "2019-12-01T15:55:18.632Z",
+        "token": ")xUQR4EWNo...DaMN8R2"
     }
 }
 ```
